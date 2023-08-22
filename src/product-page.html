@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mebel</title>
+    <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  </head>
+  <body> 
+    <header class="header">
+      <div class="container">
+        <div class="header-inner">
+          <div class="header-inner__menu">
+            <button type="button">
+              <img src="./assets/header/menu.svg" alt="" />
+              <span>Меню</span>
+            </button>
+          </div>
+          <div class="header-inner__links">
+            <a href="#">Контакти</a>
+            <a href="#">Доставка і занос</a>
+            <a href="#">Оплата і гарантія</a>
+            <a href="#">Розстрочка</a>
+          </div>
+          <div class="header-inner__right">
+            <div class="header-inner__reviews">
+              <p>Відгуки</p>
+              <span>225</span>
+            </div>
+          </div>
+          <div class="header-inner__countries">
+            <span class="title">Адреса міст</span>
+            <span class="arrow"
+              ><img src="./assets/header/down-arrow.svg" alt=""
+            /></span>
+            <div class="list">
+              <p data-city-id="1">Полтава</p>
+              <p data-city-id="2">Машівка</p>
+              <p data-city-id="3">Красноград</p>
+            </div>
+          </div>
+          <div class="header-inner__lang">
+            <span class="title">Укр</span>
+            <span class="arrow"
+              ><img src="./assets/header/down-arrow.svg" alt=""
+            /></span>
+            <div class="list">
+              <p data-lang-id="1">Укр</p>
+              <p data-lang-id="2">Eng</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="header-inner-contacts">
+        <div class="header-inner-contacts__graphs">
+          <p><span>Пн-Пт:</span> с 9.00 до 19.00</p>
+          <p><span>Сб-Вс:</span> с 10.00 до 18.00</p>
+        </div>
+        <div class="header-inner-contacts__phones">
+          <a href="tel:(044) 221-61-22"><span>(044)</span> 221-61-22</a>
+          <a href="tel:(050) 229-58-53"><span>(050)</span> 229-58-53</a>
+          <a href="tel:(093) 772-78-19"><span>(093)</span> 772-78-19</a>
+          <a href="tel:(093) 772-78-19"><span>(093)</span> 772-78-19</a>
+        </div>
+        <div class="header-inner-contacts__social">
+          <a href="#" target="_blank"
+            ><img src="./assets/header/facebook-logo-blue.svg" alt=""
+          /></a>
+          <a href="#" target="_blank"
+            ><img
+              src="./assets/header/instagram-social-network-logo-of-photo-camera-color.svg"
+              alt=""
+          /></a>
+          <a href="#" target="_blank"
+            ><img
+              src="./assets/header/social-google-plus-square-button-red.svg"
+              alt=""
+          /></a>
+          <a href="#" target="_blank"
+            ><img src="./assets/header/twitter-logo-silhouette-blue.svg" alt=""
+          /></a>
+          <a href="#" target="_blank"
+            ><img src="./assets/header/youtube-red.svg" alt=""
+          /></a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="header-inner-controls">
+        <div class="header-inner-controls__logo">
+          <a href="./"
+            ><img
+              src="https://divandivanuch.ua/image/cache/data/divan_home_v1-215x120.png"
+              alt=""
+          /></a>
+        </div>
+        <div class="header-inner-controls__search">
+          <form action="#" onsubmit="return false">
+            <input
+              type="search"
+              name="search"
+              id="header-search"
+              placeholder="Що ви шукаєте?"
+              maxlength="50"
+            />
+            <button type="submit">
+              <img src="./assets/header/loupe.svg" alt="" />
+            </button>
+          </form>
+        </div>
+        <div class="header-inner-controls__feedback">
+          <button type="button">Замовити зворотній дзвінок</button>
+        </div>
+        <div class="header-inner-controls__favorite">
+          <button type="button">
+            <img src="./assets/header/favorite.svg" alt="" />
+          </button>
+          <span>0</span>
+        </div>
+        <div class="header-inner-controls__checkout">
+          <button type="button">
+            <img src="./assets/header/shopping-basket.svg" alt="" /><span
+              >1</span
+            >
+          </button>
+          <p class="price">12 000 <span>грн</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="header-inner-controls-mobile">
+      <div class="header-inner-controls-mobile__checkout">
+        <div class="container">
+          <div class="header-inner-controls__logo">
+            <a href="./"
+              ><img
+                src="https://divandivanuch.ua/image/cache/data/divan_home_v1-215x120.png"
+                alt=""
+            /></a>
+          </div>
+          <div class="header-inner-controls__favorite">
+            <button type="button">
+              <img src="./assets/header/favorite.svg" alt="" />
+            </button>
+            <span>0</span>
+          </div>
+          <div class="header-inner-controls__checkout">
+            <button type="button">
+              <img src="./assets/header/shopping-basket.svg" alt="" /><span
+                >1</span
+              >
+            </button>
+            <p class="price">12 000 <span>грн</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="header-inner-controls-mobile__phone">
+          <a href="tel:0 800 123 12 12"
+            ><img src="./assets/header/phone-call.svg" alt="" />0 800 123 12
+            12</a
+          >
+        </div>
+        <div class="header-inner-controls-mobile__schedule">
+          <p><span>Пн-Пт:</span>с 9.00 до 19.00</p>
+          <p><span>Сб-Вс:</span>с 10.00 до 18.00</p>
+        </div>
+        <div class="header-inner-controls-mobile__feedback">
+          <button type="button" class="feedback">
+            Замовити зворотній дзвінок
+          </button>
+          <button type="button" class="search">
+            <img src="./assets/header/loupe.svg" alt="" />
+          </button>
+        </div>
+        <div class="header-inner-controls-mobile__catalog">
+          <button type="button">
+            <img src="./assets/header/list.svg" alt="" />Каталог товарів
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="header-catalog">
+      <div class="container">
+        <div class="header-catalog-inner">
+          <div class="list">
+            <div class="item">
+              <a href="#">
+                <img src="./assets/header/armchair.svg" alt="" />
+                <span>М'які меблі</span>
+              </a>
+            </div>
+            <div class="item">
+              <a href="#"
+                ><img src="./assets/header/bar.svg" alt="" />
+                <span>М'які меблі</span></a
+              >
+            </div>
+            <div class="item">
+              <a href="#"
+                ><img src="./assets/header/bed (1).svg" alt="" />
+                <span>М'які меблі</span></a
+              >
+            </div>
+            <div class="item">
+              <a href="#"
+                ><img src="./assets/header/bed.svg" alt="" />
+                <span>М'які меблі</span></a
+              >
+            </div>
+            <div class="item">
+              <a href="#"
+                ><img src="./assets/header/bed3.svg" alt="" />
+                <span>М'які меблі</span></a
+              >
+            </div>
+            <div class="item">
+              <a href="#"
+                ><img src="./assets/header/closet.svg" alt="" />
+                <span>М'які меблі</span></a
+              >
+            </div>
+            <div class="item">
+              <a href="#"
+                ><img src="./assets/header/couch.svg" alt="" />
+                <span>М'які меблі</span></a
+              >
+            </div>
+            <div class="item">
+              <a href="#"
+                ><img src="./assets/header/desk.svg" alt="" />
+                <span>М'які меблі</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="product-page">
+        <div class="product-page-offer">
+          <div class="product-page-offer-left">
+            <div class="product-page-offer-left-image">
+              <img src="./assets/product-page/product-1.jpg" alt="">
+              <div class="product-page-offer-left-status">
+                <span>Є на складі</span>
+              </div>
+              <div class="product-page-offer-left-zoom">
+                <button type="button" id="zoom">
+                  <img src="./assets/product-page/loupe.svg" alt="">
+                </button>
+              </div>
+              <div class="product-page-offer-left-youtube">
+                <button type="button" id="youtube">
+                  <img src="./assets/product-page/youtube.svg" alt="">
+                </button>
+              </div>
+            </div>
+            <div class="product-page-offer-left-swiper">
+              <!-- Swiper product images -->
+              <div class="swiper product-images">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide swiper-slide-active-click">
+                    <img src="./assets/product-page/product-1.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./assets/product-page/product-2.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./assets/product-page/product-3.jpg" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./assets/product-page/product-1.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product-page-offer-left-info">
+              <div class="product-page-offer-left-link">
+                <a href="#">Переглянути наявність диванів на складі</a>
+              </div>
+              <div class="product-page-offer-left-text">
+                <strong>Сподобався диван?</strong>
+                <p>Приходьте подивитися на нього в магазин за адресою: Київ, б-р Вацлава Гавела (Івана Лепсе), 89</p>
+              </div>
+            </div>
+          </div>
+          <div class="product-page-offer-center">
+            <div class="product-page-offer-center-head">
+              <div class="product-page-offer-center-stars">
+                <img src="./assets/product-page/star.svg" alt="">
+              </div>
+            </div>
+            <div class="product-page-offer-center-price">
+              <div class="product-page-offer-center-digits">
+                <strong>10 768 <span>грн</span></strong>
+                <p>*Ціна вказана для тканини початкової категорії</p>
+              </div>
+              <div class="product-page-offer-center-favorite">
+                <span>В список побажань</span>
+                <button type="button">
+                  <img src="./assets/header/favorite.svg" alt="">
+                </button>
+              </div>
+            </div>
+            <div class="product-page-offer-center-buttons">
+              <button type="button" class="add-checkout">
+                Додати в кошик
+              </button>
+              <button type="button" class="add-one-click-checkout">
+                Купити в 1 клік
+              </button>
+            </div>
+            <div class="product-page-offer-center-info">
+              <div class="product-page-offer-center-info-head">
+                <ul>
+                  <li>
+                    <strong>Виробник:</strong>
+                    <span>Фабрика "Eurosof"</span>
+                  </li>
+                  <li>
+                    <strong>Модель:</strong>
+                    <span>06-9122</span>
+                  </li>
+                  <li>
+                    <strong>Наявність:</strong>
+                    <span class="green">Є на складі</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="product-page-offer-center-info-main">
+                <strong>Основні характеристики</strong>
+                <ul>
+                  <li>
+                    <strong>Ширина (см)</strong>
+                    <span>146</span>
+                  </li>
+                  <li>
+                    <strong>Глубина (см)</strong>
+                    <span>95</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="product-page-offer-center-info-anchor">
+                <a href="#" class="anchor">
+                  Переглянути детальні характеристики
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="product-page-offer-right">
+            <ul>
+              <li class="product-page-offer-right-item">
+                <a href="#">
+                  <div class="product-page-offer-right-item-icon">
+                    <img src="./assets/product-page/choices.svg" alt="">
+                  </div>
+                  <div class="product-page-offer-right-item-info">
+                    <p>Доставка по Киеву, Харькову, Полтаве <span>бесплатно</span></p>
+                  </div>
+                </a>
+              </li>
+              <li class="product-page-offer-right-item">
+                <a href="#">
+                  <div class="product-page-offer-right-item-icon">
+                    <img src="./assets/product-page/customer-support.svg" alt="">
+                  </div>
+                  <div class="product-page-offer-right-item-info">
+                    <p>Доставка по Украине <span>999 грн - до конца месяца</span></p>
+                  </div>
+                </a>
+              </li>
+              <li class="product-page-offer-right-item">
+                <a href="#">
+                  <div class="product-page-offer-right-item-icon">
+                    <img src="./assets/product-page/loader.svg" alt="">
+                  </div>
+                  <div class="product-page-offer-right-item-info">
+                    <p>Сборка <span>бесплатно</span></p>
+                  </div>  
+                </a>
+              </li>
+              <li class="product-page-offer-right-item">
+                <a href="#">
+                  <div class="product-page-offer-right-item-icon">
+                    <img src="./assets/product-page/plan.svg" alt="">
+                  </div>
+                  <div class="product-page-offer-right-item-info">
+                    <p>Доставка по Киеву, Харькову, Полтаве <span>бесплатно</span></p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="product-page-bestseller">
+      <div class="container">
+        <div class="product-page-bestseller-inner">
+          <div class="product-page-bestseller-inner__title">
+            <strong>Товари в наявності на складі</strong>
+          </div>
+          <div class="product-page-bestseller-inner-list">
+            <div class="swiper swiper-product-bestseller">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="product-page-bestseller-inner-list__title">
+                    <strong>Диван Сафары (міні) Фабрика "Еврософ" Київ</strong>
+                  </div>
+                  <div class="product-page-bestseller-inner-list__image">
+                    <img src="./assets/home-banner/product-1.png" alt="">
+                  </div>
+                  <div class="product-page-bestseller-inner-list__controls">
+                    <div class="product-page-bestseller-inner-list__price">
+                      <p>10 758 <span>грн</span></p>
+                    </div>
+                    <div class="product-page-bestseller-inner-list__buy">
+                      <button type="button">До кошику</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-page-bestseller-inner-list__title">
+                    <strong>Диван Сафары (міні) Фабрика "Еврософ" Київ</strong>
+                  </div>
+                  <div class="product-page-bestseller-inner-list__image">
+                    <img src="./assets/home-banner/product-2.png" alt="">
+                  </div>
+                  <div class="product-page-bestseller-inner-list__controls">
+                    <div class="product-page-bestseller-inner-list__price">
+                      <p>10 758 <span>грн</span></p>
+                    </div>
+                    <div class="product-page-bestseller-inner-list__buy">
+                      <button type="button">До кошику</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-page-bestseller-inner-list__title">
+                    <strong>Диван Сафары (міні) Фабрика "Еврософ" Київ</strong>
+                  </div>
+                  <div class="product-page-bestseller-inner-list__image">
+                    <img src="./assets/home-banner/product-1.png" alt="">
+                  </div>
+                  <div class="product-page-bestseller-inner-list__controls">
+                    <div class="product-page-bestseller-inner-list__price">
+                      <p>10 758 <span>грн</span></p>
+                    </div>
+                    <div class="product-page-bestseller-inner-list__buy">
+                      <button type="button">До кошику</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-page-bestseller-inner-list__title">
+                    <strong>Диван Сафары (міні) Фабрика "Еврософ" Київ</strong>
+                  </div>
+                  <div class="product-page-bestseller-inner-list__image">
+                    <img src="./assets/home-banner/product-1.png" alt="">
+                  </div>
+                  <div class="product-page-bestseller-inner-list__controls">
+                    <div class="product-page-bestseller-inner-list__price">
+                      <p>10 758 <span>грн</span></p>
+                    </div>
+                    <div class="product-page-bestseller-inner-list__buy">
+                      <button type="button">До кошику</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-page-bestseller-inner-list__title">
+                    <strong>Диван Сафары (міні) Фабрика "Еврософ" Київ</strong>
+                  </div>
+                  <div class="product-page-bestseller-inner-list__image">
+                    <img src="./assets/home-banner/product-2.png" alt="">
+                  </div>
+                  <div class="product-page-bestseller-inner-list__controls">
+                    <div class="product-page-bestseller-inner-list__price">
+                      <p>10 758 <span>грн</span></p>
+                    </div>
+                    <div class="product-page-bestseller-inner-list__buy">
+                      <button type="button">До кошику</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-page-bestseller-inner-list__title">
+                    <strong>Диван Сафары (міні) Фабрика "Еврософ" Київ</strong>
+                  </div>
+                  <div class="product-page-bestseller-inner-list__image">
+                    <img src="./assets/home-banner/product-1.png" alt="">
+                  </div>
+                  <div class="product-page-bestseller-inner-list__controls">
+                    <div class="product-page-bestseller-inner-list__price">
+                      <p>10 758 <span>грн</span></p>
+                    </div>
+                    <div class="product-page-bestseller-inner-list__buy">
+                      <button type="button">До кошику</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="options">
+        <div class="options-title">
+          <strong>Доступні варіанти</strong>
+        </div>
+        <div class="options-inner">
+          <div class="options-inner-item">
+            <div class="options-inner-item-title">
+              <strong>Додаткові опції для дивана:</strong>
+            </div>
+            <div class="options-inner-item-inputs">
+              <input type="checkbox" id="change-sizes">
+              <label for="change-sizes">Зміна габаритних розмірів дивана <span>(+386 грн*)</span></label>
+            </div>
+          </div>
+          <div class="options-inner-item">
+            <div class="options-inner-item-title">
+              <strong>Наповнення спального місця:</strong>
+            </div>
+            <div class="options-inner-item-inputs">
+              <input type="checkbox" id="change-sizes-1">
+              <label for="change-sizes-1">Зміна габаритних розмірів дивана</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="tabs">
+        <div class="tabs-head">
+          <div class="tabs-head-item active" data-tab="features">
+            <strong>Характеристики</strong>
+          </div>
+          <div class="tabs-head-item" data-tab="info">
+            <strong>Опис</strong>
+          </div>
+          <div class="tabs-head-item" data-tab="reviews">
+            <strong>Відгуки</strong>
+          </div>
+        </div>
+        <div class="tabs-inner">
+          <div class="tabs-inner-list active" data-tab="features">
+            <ul class="tabs-inner-features-list_left">
+              <li>
+                <strong>Сроки изготовления</strong>
+                <span>1-3</span>
+              </li>
+              <li>
+                <strong>Сроки изготовления</strong>
+                <span>1-3</span>
+              </li>
+              <li>
+                <strong>Сроки изготовления</strong>
+                <span>1-3</span>
+              </li>
+              <li>
+                <strong>Сроки изготовления</strong>
+                <span>1-3</span>
+              </li>
+            </ul>
+            <ul class="tabs-inner-features-list_right">
+              <li>
+                <strong>Сроки изготовления</strong>
+                <span>1-3</span>
+              </li>
+              <li>
+                <strong>Сроки изготовления</strong>
+                <span>1-3</span>
+              </li>
+              <li>
+                <strong>Сроки изготовления</strong>
+                <span>1-3</span>
+              </li>
+              <li>
+                <strong>Сроки изготовления</strong>
+                <span>1-3</span>
+              </li>
+            </ul>
+          </div>
+          <div class="tabs-inner-list" data-tab="info">
+            <ul>
+              <li>
+                <strong>Сроки изготовления</strong>
+                <span>1-3</span>
+              </li>
+              <li>
+                <strong>Сроки изготовления</strong>
+                <span>1-3</span>
+              </li>
+              <li>
+                <strong>Сроки изготовления</strong>
+                <span>1-3</span>
+              </li>
+              <li>
+                <strong>Сроки изготовления</strong>
+                <span>1-3</span>
+              </li>
+            </ul>
+          </div>
+          <div class="tabs-inner-list" data-tab="reviews">
+            <ul>
+              <li>
+                <strong>Сроки изготовления</strong>
+                <span>1-3</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="product-page-interesting">
+      <div class="container">
+        <div class="product-page-interesting-inner">
+          <div class="product-page-interesting-inner__title">
+            <strong>Вам можуть бути цікаві ці товари</strong>
+          </div>
+          <div class="product-page-interesting-inner-list">
+            <div class="swiper swiper-product-interesting">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="product-page-interesting-inner-list__title">
+                    <strong>Диван Сафары (міні) Фабрика "Еврософ" Київ</strong>
+                  </div>
+                  <div class="product-page-interesting-inner-list__image">
+                    <img src="./assets/home-banner/product-1.png" alt="">
+                  </div>
+                  <div class="product-page-interesting-inner-list__controls">
+                    <div class="product-page-interesting-inner-list__price">
+                      <p>10 758 <span>грн</span></p>
+                    </div>
+                    <div class="product-page-interesting-inner-list__buy">
+                      <button type="button">До кошику</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-page-interesting-inner-list__title">
+                    <strong>Диван Сафары (міні) Фабрика "Еврософ" Київ</strong>
+                  </div>
+                  <div class="product-page-interesting-inner-list__image">
+                    <img src="./assets/home-banner/product-2.png" alt="">
+                  </div>
+                  <div class="product-page-interesting-inner-list__controls">
+                    <div class="product-page-interesting-inner-list__price">
+                      <p>10 758 <span>грн</span></p>
+                    </div>
+                    <div class="product-page-interesting-inner-list__buy">
+                      <button type="button">До кошику</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-page-interesting-inner-list__title">
+                    <strong>Диван Сафары (міні) Фабрика "Еврософ" Київ</strong>
+                  </div>
+                  <div class="product-page-interesting-inner-list__image">
+                    <img src="./assets/home-banner/product-1.png" alt="">
+                  </div>
+                  <div class="product-page-interesting-inner-list__controls">
+                    <div class="product-page-interesting-inner-list__price">
+                      <p>10 758 <span>грн</span></p>
+                    </div>
+                    <div class="product-page-interesting-inner-list__buy">
+                      <button type="button">До кошику</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-page-interesting-inner-list__title">
+                    <strong>Диван Сафары (міні) Фабрика "Еврософ" Київ</strong>
+                  </div>
+                  <div class="product-page-interesting-inner-list__image">
+                    <img src="./assets/home-banner/product-1.png" alt="">
+                  </div>
+                  <div class="product-page-interesting-inner-list__controls">
+                    <div class="product-page-interesting-inner-list__price">
+                      <p>10 758 <span>грн</span></p>
+                    </div>
+                    <div class="product-page-interesting-inner-list__buy">
+                      <button type="button">До кошику</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-page-interesting-inner-list__title">
+                    <strong>Диван Сафары (міні) Фабрика "Еврософ" Київ</strong>
+                  </div>
+                  <div class="product-page-interesting-inner-list__image">
+                    <img src="./assets/home-banner/product-2.png" alt="">
+                  </div>
+                  <div class="product-page-interesting-inner-list__controls">
+                    <div class="product-page-interesting-inner-list__price">
+                      <p>10 758 <span>грн</span></p>
+                    </div>
+                    <div class="product-page-interesting-inner-list__buy">
+                      <button type="button">До кошику</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-page-interesting-inner-list__title">
+                    <strong>Диван Сафары (міні) Фабрика "Еврософ" Київ</strong>
+                  </div>
+                  <div class="product-page-interesting-inner-list__image">
+                    <img src="./assets/home-banner/product-1.png" alt="">
+                  </div>
+                  <div class="product-page-interesting-inner-list__controls">
+                    <div class="product-page-interesting-inner-list__price">
+                      <p>10 758 <span>грн</span></p>
+                    </div>
+                    <div class="product-page-interesting-inner-list__buy">
+                      <button type="button">До кошику</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="product-page-review">
+      <div class="container">
+        <div class="product-page-review-inner">
+          <div class="product-page-review-inner__title">
+            <strong>Товари, що Ви вже переглядали</strong>
+          </div>
+          <div class="product-page-review-inner-list">
+            <div class="swiper swiper-product-review">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="product-page-review-inner-list__title">
+                    <strong>Диван Сафары (міні) Фабрика "Еврософ" Київ</strong>
+                  </div>
+                  <div class="product-page-review-inner-list__image">
+                    <img src="./assets/home-banner/product-1.png" alt="">
+                  </div>
+                  <div class="product-page-review-inner-list__controls">
+                    <div class="product-page-review-inner-list__price">
+                      <p>10 758 <span>грн</span></p>
+                    </div>
+                    <div class="product-page-review-inner-list__buy">
+                      <button type="button">До кошику</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-page-review-inner-list__title">
+                    <strong>Диван Сафары (міні) Фабрика "Еврософ" Київ</strong>
+                  </div>
+                  <div class="product-page-review-inner-list__image">
+                    <img src="./assets/home-banner/product-2.png" alt="">
+                  </div>
+                  <div class="product-page-review-inner-list__controls">
+                    <div class="product-page-review-inner-list__price">
+                      <p>10 758 <span>грн</span></p>
+                    </div>
+                    <div class="product-page-review-inner-list__buy">
+                      <button type="button">До кошику</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-page-review-inner-list__title">
+                    <strong>Диван Сафары (міні) Фабрика "Еврософ" Київ</strong>
+                  </div>
+                  <div class="product-page-review-inner-list__image">
+                    <img src="./assets/home-banner/product-1.png" alt="">
+                  </div>
+                  <div class="product-page-review-inner-list__controls">
+                    <div class="product-page-review-inner-list__price">
+                      <p>10 758 <span>грн</span></p>
+                    </div>
+                    <div class="product-page-review-inner-list__buy">
+                      <button type="button">До кошику</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-page-review-inner-list__title">
+                    <strong>Диван Сафары (міні) Фабрика "Еврософ" Київ</strong>
+                  </div>
+                  <div class="product-page-review-inner-list__image">
+                    <img src="./assets/home-banner/product-1.png" alt="">
+                  </div>
+                  <div class="product-page-review-inner-list__controls">
+                    <div class="product-page-review-inner-list__price">
+                      <p>10 758 <span>грн</span></p>
+                    </div>
+                    <div class="product-page-review-inner-list__buy">
+                      <button type="button">До кошику</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-page-review-inner-list__title">
+                    <strong>Диван Сафары (міні) Фабрика "Еврософ" Київ</strong>
+                  </div>
+                  <div class="product-page-review-inner-list__image">
+                    <img src="./assets/home-banner/product-2.png" alt="">
+                  </div>
+                  <div class="product-page-review-inner-list__controls">
+                    <div class="product-page-review-inner-list__price">
+                      <p>10 758 <span>грн</span></p>
+                    </div>
+                    <div class="product-page-review-inner-list__buy">
+                      <button type="button">До кошику</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="product-page-review-inner-list__title">
+                    <strong>Диван Сафары (міні) Фабрика "Еврософ" Київ</strong>
+                  </div>
+                  <div class="product-page-review-inner-list__image">
+                    <img src="./assets/home-banner/product-1.png" alt="">
+                  </div>
+                  <div class="product-page-review-inner-list__controls">
+                    <div class="product-page-review-inner-list__price">
+                      <p>10 758 <span>грн</span></p>
+                    </div>
+                    <div class="product-page-review-inner-list__buy">
+                      <button type="button">До кошику</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-inner-item footer-inner-item_copyright">
+            <div class="footer-inner-item__logo">
+              <a href="./"><img src="https://divandivanuch.ua/image/cache/data/divan_home_v1-215x120.png" alt=""></a>
+            </div>
+            <div class="footer-inner-item__text">
+              <p><b>&#169; Интернет-магазин "Puffik" 2016- <span id="year">2023</span></b> <br><br>
+                Все права защищены. Puffik является зарегистрированной торговой маркой с 2016 года.</p>
+            </div>
+          </div>
+          <div class="footer-inner-item footer-inner-item_info">
+            <strong>Інформація</strong>
+            <ul>
+              <li>
+                <a href="#">Контакти</a>
+              </li>
+              <li>
+                <a href="#">Доставка і занос</a>
+              </li>
+              <li>
+                <a href="#">Оплата і гарантія</a>
+              </li>
+              <li>
+                <a href="#">Розстрочка</a>
+              </li>
+              <li>
+                <a href="#">Збірник</a>
+              </li>
+              <li>
+                <a href="#">Як замовити м'які меблі?</a>
+              </li>
+              <li>
+                <a href="#">Новини</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-inner-item footer-inner-item_contacts">
+            <strong>Контакти</strong>
+            <ul class="phones">
+              <li><a href="tel:+(044)221-61-22"><span>(044)</span> 221-61-22</a></li>
+              <li><a href="tel:+38 (050) 229-58-53"><span>+38 (050)</span> 229-58-53</a></li>
+              <li><a href="tel:+38 (093) 772-78-19"><span>+38 (093)</span> 772-78-19</a></li>
+              <li><a href="tel:+38 (098) 047-22-70"><span>+38 (098)</span> 047-22-70</a></li>
+            </ul>
+            <ul class="social">
+              <a href="#" target="_blank"><img src="./assets/header/facebook-logo-blue.svg" alt=""></a>
+              <a href="#" target="_blank"><img src="./assets/header/instagram-social-network-logo-of-photo-camera-color.svg" alt=""></a>
+              <a href="#" target="_blank"><img src="./assets/header/social-google-plus-square-button-red.svg" alt=""></a>
+              <a href="#" target="_blank"><img src="./assets/header/twitter-logo-silhouette-blue.svg" alt=""></a>
+              <a href="#" target="_blank"><img src="./assets/header/youtube-red.svg" alt=""></a>
+            </ul>
+          </div>
+          <div class="footer-inner-item footer-inner-item_address">
+            <strong>Адреса і графік роботи</strong>
+            <div class="info">
+              <p><b>Київ, Бульвар Вацлава Гавела 89</b><br><br>
+                <b>Пн-Пт:</b> с 9.00 до 19.00<br><br>
+                <b>Сб-Вс:</b> с 10.00 до 18.00<br><br>
+                Без выходных и перерывов!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/bundle.js"></script>
+  </body>
+</html>

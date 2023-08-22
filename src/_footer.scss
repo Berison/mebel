@@ -1,0 +1,135 @@
+.footer {
+  padding: 40px 0;
+
+  @media (max-width: 996px) {
+    padding-bottom: 0;
+  }
+
+  &-inner {
+    display: flex;
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    @media (max-width: 996px) {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    @media (max-width: 576px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &-item {
+      @media (max-width: 996px) {
+        margin-bottom: 40px;
+      }
+      &_copyright {
+        max-width: 291px;
+      }
+
+      & > strong {
+        text-align: right;
+        display: block;
+        margin-bottom: 15px;
+        font-size: 20px;
+        color: var(--mainGreen);
+        text-transform: uppercase;
+      }
+
+      &_info {
+        max-width: 210px;
+
+        li {
+          text-align: right;
+          &:not(:last-of-type) {
+            margin-bottom: 10px;
+          }
+          a {
+            font-size: 16px;
+            color: #000;
+          }
+        }
+      }
+
+      &_contacts {
+        .phones {
+          li {
+            text-align: right;
+            &:not(:last-of-type) {
+              margin-bottom: 10px;
+            }
+          }
+          a {
+            font-size: 18px;
+            color: #000;
+            span {
+              color: #666;
+            }
+          }
+        }
+
+        .social {
+          display: flex;
+          align-items: center;
+          margin-top: 26px;
+          img {
+            height: 24px;
+            width: 24px;
+            transform: rotate(0);
+            transition: all 0.5s;
+          }
+          a {
+            flex-shrink: 0;
+            filter: grayscale(1);
+            transition: all 0.5s;
+            &:hover {
+              filter: none;
+              transition: all 0.5s;
+              img {
+                transform: rotate(360deg);
+                transition: all 0.5s;
+              }
+            }
+            &:not(:last-of-type) {
+              margin-right: 10px;
+            }
+            
+          }
+          
+        }
+      }
+
+      &_address {
+        text-align: right;
+      }
+
+      &__logo {
+        margin-bottom: 26px;
+
+        img {
+          height: 80px;
+        }
+      }
+      
+      &__text {
+        p {
+          font-size: 15px;
+        }
+      }
+      @media (max-width: 576px) {
+        text-align: center;
+        li {
+          text-align: center !important;
+        }
+        strong {
+          text-align: center !important;
+        }
+        a {
+          text-align: center !important;
+        }
+      }
+    }
+  }
+}

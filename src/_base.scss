@@ -1,0 +1,43 @@
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #fbfbfb;
+    color: #000;
+}
+
+:root {
+    --mainGreen: #2f921b;
+}
+
+* {
+    transition: all .3s;
+}
+
+.container {
+    max-width: 1320px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    
+    &.row {
+        padding: 0;
+    }
+
+    @media (max-width: 576px) {
+        padding: 0 16px;
+
+        &.row {
+            padding: 0 16px;
+        }
+    }
+
+    
+}
+
+button {
+    cursor: pointer;
+    box-shadow: none;
+    background: transparent;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+}
