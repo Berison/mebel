@@ -17,7 +17,7 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 </head>
 
-<body>
+<body class="catalog">
   <header class="header">
     <div class="container">
       <div class="header-inner">
@@ -197,7 +197,97 @@
       </div>
     </div>
   </div>
-  <div style="text-align: center; margin: 100px;">MAIN CONTENT!!!</div>
+  <div class="container">
+    <div class="catalog__wrapper">
+      <aside class="filter">
+        <p>HERE WILL BE FILTER</p>
+      </aside>
+      <div class="catalog__content">
+        <h2 class="catalog__header">Дивани</h2>
+        <div class="catalog__choise-menu">
+          <div class="catalog__sort">
+            <span class="catalog__sort-title">Сортувати</span>
+            <div class="catalog__sort-dropdown">
+              <button class="catalog__sort-btn">
+                <span class="catalog__sort-option">За замовчуванням</span>
+                <img class="catalog__sort-arrow" src="./assets/catalog-page/down-arrow.svg" alt="">
+              </button>
+              <ul class="catalog__sort-list">
+                <li class="catalog__sort-item">За замовчуванням</li>
+                <li class="catalog__sort-item">Варіант 1</li>
+                <li class="catalog__sort-item">Варіант 2</li>
+                <li class="catalog__sort-item">Варіант 3</li>
+              </ul>
+            </div>
+          </div>
+          <div class="catalog__viewtype">
+            <button class="catalog__btn catalog__btn--grid active">
+              <svg height="512pt" viewBox="0 -52 512.00001 512" width="512pt" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="m0 113.292969h113.292969v-113.292969h-113.292969zm30.003906-83.289063h53.289063v53.289063h-53.289063zm0 0" />
+                <path
+                  d="m149.296875 0v113.292969h362.703125v-113.292969zm332.699219 83.292969h-302.695313v-53.289063h302.695313zm0 0" />
+                <path
+                  d="m0 260.300781h113.292969v-113.292969h-113.292969zm30.003906-83.292969h53.289063v53.289063h-53.289063zm0 0" />
+                <path
+                  d="m149.296875 260.300781h362.703125v-113.292969h-362.703125zm30.003906-83.292969h302.695313v53.289063h-302.695313zm0 0" />
+                <path
+                  d="m0 407.308594h113.292969v-113.296875h-113.292969zm30.003906-83.292969h53.289063v53.289063h-53.289063zm0 0" />
+                <path
+                  d="m149.296875 407.308594h362.703125v-113.296875h-362.703125zm30.003906-83.292969h302.695313v53.289063h-302.695313zm0 0" />
+              </svg>
+              <!-- <img src="./assets/catalog-page/list.svg" alt="gird-icon"> -->
+            </button>
+            <div class="vetical-line"></div>
+            <button class="catalog__btn catalog__btn--list">
+              <svg height="512pt" viewBox="0 -52 512.00001 512" width="512pt" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="m0 113.292969h113.292969v-113.292969h-113.292969zm30.003906-83.289063h53.289063v53.289063h-53.289063zm0 0" />
+                <path
+                  d="m149.296875 0v113.292969h362.703125v-113.292969zm332.699219 83.292969h-302.695313v-53.289063h302.695313zm0 0" />
+                <path
+                  d="m0 260.300781h113.292969v-113.292969h-113.292969zm30.003906-83.292969h53.289063v53.289063h-53.289063zm0 0" />
+                <path
+                  d="m149.296875 260.300781h362.703125v-113.292969h-362.703125zm30.003906-83.292969h302.695313v53.289063h-302.695313zm0 0" />
+                <path
+                  d="m0 407.308594h113.292969v-113.296875h-113.292969zm30.003906-83.292969h53.289063v53.289063h-53.289063zm0 0" />
+                <path
+                  d="m149.296875 407.308594h362.703125v-113.296875h-362.703125zm30.003906-83.292969h302.695313v53.289063h-302.695313zm0 0" />
+              </svg>
+              <!-- <img src="./assets/catalog-page/list.svg" alt="list-icon"> -->
+            </button>
+          </div>
+
+        </div>
+        <div class="catalog__main">
+          <div class="catalog__card card">
+            <div class="card__badge hit">Хit</div>
+            <h3 class="card__title">Диван Еліт (міні) Фабрика "Еврософ" Київ</h3>
+            <div class="card__props">
+              <div class="card__property success">
+                <img class="card__property-icon" src="" alt="">
+                <span class="card__property-text">Є на складі</span>
+              </div>
+              <div class="card__property success">
+                <img class="card__property-icon" src="" alt="">
+                <span class="card__property-text">Безкоштовна доставка</span>
+              </div>
+            </div>
+            <div class="card__image">
+              <img src="" alt="Диван Еліт (міні) Фабрика 'Еврософ' Київ">
+            </div>
+            <div class="card__footer">
+              <div class="card__price">
+                <div class="card__cost">10758</div>
+                <div class="card__currency">грн</div>
+              </div>
+              <button class="card__btn"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <footer class="footer">
     <div class="container">
       <div class="footer-inner">

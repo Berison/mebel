@@ -6,7 +6,7 @@ const countriesButton = document.querySelectorAll('.header-inner__countries, .he
 countriesButton.forEach(button => {
   button.addEventListener('click', e => {
     button.classList.toggle('active')
-    if(e.target.closest('p')) {
+    if (e.target.closest('p')) {
       button.querySelector('span.title').innerHTML = e.target.closest('p').textContent;
     }
   })
@@ -20,7 +20,7 @@ menuMob.addEventListener('click', () => {
 // Remove all 
 document.addEventListener('click', e => {
   const target = e.target,
-   classes = ['.header-inner__countries', '.header-inner__lang'];
+    classes = ['.header-inner__countries', '.header-inner__lang'];
 
   !target.closest(classes) ? document.querySelectorAll(classes).forEach(button => button.classList.remove('active')) : null;
 })
@@ -205,7 +205,7 @@ const productPage = document.querySelector('.product-page');
 if (productPage) {
   // Get the main product image
   const mainImage = productPage.querySelector('.product-page-offer-left-image > img');
-  
+
   // Get all the selectable product images
   const selectImages = productPage.querySelectorAll('.product-images .swiper-slide');
 
@@ -214,10 +214,10 @@ if (productPage) {
     select.onclick = () => {
       // Remove active class from all selectable images
       selectImages.forEach(e => e.classList.remove('swiper-slide-active-click'));
-      
+
       // Add active class to the clicked selectable image
       select.classList.add('swiper-slide-active-click');
-      
+
       // Change the source of the main image to the selected image's source
       mainImage.src = select.querySelector('img').src;
     };
@@ -250,3 +250,19 @@ const yearSpan = document.getElementById('year'),
   currentYear = new Date();
 
 yearSpan.innerHTML = currentYear.getFullYear();
+
+
+//Catalog-page
+const catalogPage = document.querySelector('.catalog');
+
+if (catalogPage) {
+  const catalogSortBtn = document.querySelector('.catalog__sort-dropdown')
+  const catalogMainOption = document.querySelector('.catalog__sort-option')
+  catalogSortBtn.addEventListener('click', (e) => {
+    catalogSortBtn.classList.toggle('active')
+    if (e.target.closest('.catalog__sort-item')) {
+      console.log(e.target)
+      catalogMainOption.innerHTML = e.target.innerHTML
+    }
+  })
+}
