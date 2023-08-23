@@ -258,11 +258,17 @@ const catalogPage = document.querySelector('.catalog');
 if (catalogPage) {
   const catalogSortBtn = document.querySelector('.catalog__sort-dropdown')
   const catalogMainOption = document.querySelector('.catalog__sort-option')
+  const formattedNums = document.querySelectorAll('.catalog .formatted')
+
   catalogSortBtn.addEventListener('click', (e) => {
     catalogSortBtn.classList.toggle('active')
     if (e.target.closest('.catalog__sort-item')) {
       console.log(e.target)
       catalogMainOption.innerHTML = e.target.innerHTML
     }
+  })
+
+  formattedNums.forEach(num => {
+    num.textContent = parseInt(num.textContent).toLocaleString('ru-RU');
   })
 }
