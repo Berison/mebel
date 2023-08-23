@@ -85,7 +85,10 @@
     padding: 8px 15px;
 
     .catalog__sort-option {
-      width: 130px;
+      font-size: 18px;
+      color: rgb(77, 77, 77);
+      line-height: 1.556;
+      width: 170px;
     }
 
     img {
@@ -136,7 +139,6 @@
       svg {
         width: 20px;
         height: 20px;
-
       }
     }
 

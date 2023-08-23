@@ -2647,7 +2647,10 @@ button {
   padding: 8px 15px;
 }
 .catalog .catalog__sort-btn .catalog__sort-option {
-  width: 130px;
+  font-size: 18px;
+  color: rgb(77, 77, 77);
+  line-height: 1.556;
+  width: 170px;
 }
 .catalog .catalog__sort-btn img {
   width: 15px;
