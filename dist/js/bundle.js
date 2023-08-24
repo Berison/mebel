@@ -258,17 +258,31 @@ const catalogPage = document.querySelector('.catalog');
 if (catalogPage) {
   const catalogSortBtn = document.querySelector('.catalog__sort-dropdown')
   const catalogMainOption = document.querySelector('.catalog__sort-option')
+  const catalogSortList = document.querySelector('.catalog__sort-list')
   const formattedNums = document.querySelectorAll('.catalog .formatted')
+  const cards = document.querySelectorAll('.catalog__card-wrapper')
 
   catalogSortBtn.addEventListener('click', (e) => {
     catalogSortBtn.classList.toggle('active')
     if (e.target.closest('.catalog__sort-item')) {
-      console.log(e.target)
       catalogMainOption.innerHTML = e.target.innerHTML
+      catalogSortList.querySelectorAll('.catalog__sort-item').forEach(item => {
+        item.classList.remove('active')
+      })
+      e.target.classList.add('active')
     }
   })
 
   formattedNums.forEach(num => {
     num.textContent = parseInt(num.textContent).toLocaleString('ru-RU');
+  })
+
+  cards.forEach(card => {
+    card.addEventListener('mouseover', (e) => {
+      if (e.target.closest('.catalog__card-wrapper') === card) {
+        cards.forEach(item => item.classList.remove('active'))
+        card.classList.add('active')
+      }
+    })
   })
 }
