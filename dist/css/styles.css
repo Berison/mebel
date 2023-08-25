@@ -2580,17 +2580,23 @@ button {
   display: flex;
   align-items: start;
   justify-content: start;
-  grid-gap: 55px;
+  grid-gap: 50px;
   padding-top: 50px;
+  padding-bottom: 50px;
 }
 .catalog .filter {
-  width: 350px;
-  height: 1000px;
+  width: 260px;
+  height: 100%;
   background-color: #eee;
   padding: 50px;
+  flex-shrink: 0;
+}
+.catalog .catalog__main {
+  width: 100%;
 }
 .catalog .catalog__content {
   width: 100%;
+  padding-bottom: 30px;
 }
 .catalog .catalog__header {
   display: inline-block;
@@ -2715,7 +2721,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  grid-gap: 15px;
+  grid-gap: 20px;
   flex-wrap: wrap;
 }
 .catalog .catalog__card-wrapper {
@@ -2726,6 +2732,9 @@ button {
 }
 .catalog .catalog__card-wrapper.active .cardinfo {
   z-index: 3;
+}
+.catalog .catalog__card-wrapper.banner .card::after {
+  display: block;
 }
 .catalog .catalog__card-wrapper.banner .card__image img {
   position: absolute;
@@ -2752,6 +2761,18 @@ button {
   background-color: #fff;
   max-width: 297px;
   z-index: 2;
+}
+.catalog .card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: 0.2;
+  display: none;
+  z-index: 1;
 }
 .catalog .card:hover {
   box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.2);
@@ -2947,5 +2968,66 @@ button {
   white-space: nowrap;
 }
 .catalog .cardinfo__data {
+  white-space: nowrap;
+}
+.catalog .pagination {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 30px;
+}
+.catalog .paginationn__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  grid-gap: 10px;
+}
+.catalog .pagination__numbers {
+  display: flex;
+  align-items: flex-end;
+  justify-content: start;
+  grid-gap: 6px;
+}
+.catalog .pagination__num {
+  font-size: 22px;
+  color: #000;
+  line-height: 1;
+  padding: 4px;
+}
+.catalog .pagination__num.active {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--mainGreen);
+}
+.catalog .pagination__arrow {
+  display: block;
+  color: #000;
+  padding: 4px;
+  font-weight: 700px;
+}
+.catalog .pagination__arrow svg {
+  width: auto;
+  fill: #000;
+  height: 10px;
+}
+.catalog .pagination__button {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 10px 24px;
+  background-color: #4d4d4d;
+  border-radius: 20px;
+  grid-gap: 10px;
+}
+.catalog .pagination__button svg {
+  fill: #fff;
+  width: 20px;
+  height: auto;
+}
+.catalog .pagination__button-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
   white-space: nowrap;
 }
