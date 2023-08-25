@@ -260,8 +260,10 @@ if (catalogPage) {
   const catalogMainOption = document.querySelector('.catalog__sort-option')
   const catalogSortList = document.querySelector('.catalog__sort-list')
   const formattedNums = document.querySelectorAll('.catalog .formatted')
-  const cards = document.querySelectorAll('.catalog__card-wrapper')
+  const cards = document.querySelectorAll('.catalog__card-grid')
+  const viewTypeBtns = document.querySelectorAll('.catalog__btn')
 
+  //Dropdown "Сортувати"
   catalogSortBtn.addEventListener('click', (e) => {
     catalogSortBtn.classList.toggle('active')
     if (e.target.closest('.catalog__sort-item')) {
@@ -273,16 +275,44 @@ if (catalogPage) {
     }
   })
 
+  //Formating price from 10758 to 10 758
   formattedNums.forEach(num => {
     num.textContent = parseInt(num.textContent).toLocaleString('ru-RU');
   })
 
+  //Для того, чтобы при наведении на карточку выезжающий список был всегда поверх соседних карточек, но на уровень ниже своей родительской карточки добавляется отдельный класс, чтобы родительской карточке дать наивысший z-index
   cards.forEach(card => {
     card.addEventListener('mouseover', (e) => {
-      if (e.target.closest('.catalog__card-wrapper') === card) {
+      if (e.target.closest('.catalog__card-grid') === card) {
         cards.forEach(item => item.classList.remove('active'))
         card.classList.add('active')
       }
     })
   })
+
+  //Switch grid/list view
+  viewTypeBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const target = e.target
+      const gridBtn = target.closest('.catalog__viewtype').querySelector('.catalog__btn--grid')
+      const listBtn = target.closest('.catalog__viewtype').querySelector('.catalog__btn--list')
+      const cards = document.querySelectorAll('.catalog__card-wrapper')
+
+      if (target.closest('.catalog__btn--grid')) {
+        gridBtn.classList.add('active')
+        listBtn.classList.remove('active')
+        cards.forEach(card => {
+          card.classList.remove('list')
+        })
+      } else if (target.closest('.catalog__btn--list')) {
+        listBtn.classList.add('active')
+        gridBtn.classList.remove('active')
+        cards.forEach(card => {
+          card.classList.add('list')
+        })
+      }
+    })
+  })
+
+
 }

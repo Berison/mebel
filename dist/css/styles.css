@@ -2724,19 +2724,33 @@ button {
   grid-gap: 20px;
   flex-wrap: wrap;
 }
-.catalog .catalog__card-wrapper {
+.catalog .catalog__card-wrapper:nth-child(3n) .catalog__card-grid:hover .cardinfo {
+  left: -107%;
+  width: 107%;
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.2);
+}
+.catalog .catalog__card-wrapper.list {
+  width: 100%;
+}
+.catalog .catalog__card-wrapper.list .catalog__card-grid {
+  display: none;
+}
+.catalog .catalog__card-wrapper.list .catalog__card-list {
+  display: flex;
+}
+.catalog .catalog__card-grid {
   position: relative;
 }
-.catalog .catalog__card-wrapper.active .card {
+.catalog .catalog__card-grid.active .card {
   z-index: 4;
 }
-.catalog .catalog__card-wrapper.active .cardinfo {
+.catalog .catalog__card-grid.active .cardinfo {
   z-index: 3;
 }
-.catalog .catalog__card-wrapper.banner .card::after {
+.catalog .catalog__card-grid.banner .card::after {
   display: block;
 }
-.catalog .catalog__card-wrapper.banner .card__image img {
+.catalog .catalog__card-grid.banner .card__image img {
   position: absolute;
   left: 0;
   top: 0;
@@ -2745,13 +2759,8 @@ button {
   width: 100%;
   height: 100%;
 }
-.catalog .catalog__card-wrapper:hover .cardinfo {
+.catalog .catalog__card-grid:hover .cardinfo {
   left: 100%;
-  width: 107%;
-  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.2);
-}
-.catalog .catalog__card-wrapper:nth-child(3n):hover .cardinfo {
-  left: -107%;
   width: 107%;
   box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.2);
 }
@@ -3030,4 +3039,37 @@ button {
   font-weight: 500;
   color: #fff;
   white-space: nowrap;
+}
+.catalog .catalog__card-list {
+  position: relative;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-gap: 20px;
+  padding: 10px;
+  display: none;
+}
+.catalog .catalog__card-list .card__image {
+  width: auto;
+  height: 230px;
+  margin: 0;
+  flex-shrink: 0;
+}
+.catalog .catalog__card-list .catalog_card-main {
+  max-width: 315px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: normal;
+  height: 100%;
+}
+.catalog .catalog__card-list .cardinfo__item {
+  padding: 6px 0;
+}
+.catalog .catalog__card-list .card__tag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
 }
