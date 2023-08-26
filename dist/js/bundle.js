@@ -260,7 +260,8 @@ if (catalogPage) {
   const catalogMainOption = document.querySelector('.catalog__sort-option')
   const catalogSortList = document.querySelector('.catalog__sort-list')
   const formattedNums = document.querySelectorAll('.catalog .formatted')
-  const cards = document.querySelectorAll('.catalog__card-grid')
+  const cardsGrid = document.querySelectorAll('.catalog__card-grid')
+  const cardsList = document.querySelectorAll('.catalog__card-list')
   const viewTypeBtns = document.querySelectorAll('.catalog__btn')
   const btnGrid = document.querySelector('.catalog__btn--grid')
   const btnList = document.querySelector('.catalog__btn--list')
@@ -273,9 +274,16 @@ if (catalogPage) {
       catalogSortList.querySelectorAll('.catalog__sort-item').forEach(item => {
         item.classList.remove('active')
       })
-      e.target.classList.add('active')
+      e.target.closest('.catalog__sort-item').classList.add('active')
     }
   })
+
+  //Close dropdown if click will not to dropdown
+  window.onclick = (e) => {
+    if (!e.target.closest('.catalog__sort-dropdown')) {
+      catalogSortBtn.classList.remove('active')
+    }
+  }
 
   //Formating price from 10758 to 10 758
   formattedNums.forEach(num => {
@@ -283,10 +291,10 @@ if (catalogPage) {
   })
 
   //Для того, чтобы при наведении на карточку выезжающий список был всегда поверх соседних карточек, но на уровень ниже своей родительской карточки добавляется отдельный класс, чтобы родительской карточке дать наивысший z-index
-  cards.forEach(card => {
+  cardsGrid.forEach(card => {
     card.addEventListener('mouseover', (e) => {
       if (e.target.closest('.catalog__card-grid') === card) {
-        cards.forEach(item => item.classList.remove('active'))
+        cardsGrid.forEach(item => item.classList.remove('active'))
         card.classList.add('active')
       }
     })
@@ -303,17 +311,17 @@ if (catalogPage) {
   viewTypeBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
       const target = e.target
-      const cards = document.querySelectorAll('.catalog__card-wrapper')
+      const cardsGrid = document.querySelectorAll('.catalog__card-wrapper')
       if (target.closest('.catalog__btn--grid')) {
         btnGrid.classList.add('active')
         btnList.classList.remove('active')
-        cards.forEach(card => {
+        cardsGrid.forEach(card => {
           card.classList.remove('list')
         })
       } else if (target.closest('.catalog__btn--list')) {
         btnList.classList.add('active')
         btnGrid.classList.remove('active')
-        cards.forEach(card => {
+        cardsGrid.forEach(card => {
           card.classList.add('list')
         })
       }
@@ -330,9 +338,9 @@ if (catalogPage) {
       document.querySelector('.catalog__btn--list').removeAttribute('disabled')
     }
 
-    // If window bigger 768 remove from cards class rotation
+    // If window bigger 768 remove from cardsGrid class rotation
     if (window.innerWidth > 768) {
-      cards.forEach(card => {
+      cardsGrid.forEach(card => {
         card.classList.remove('rotation')
       })
     }
