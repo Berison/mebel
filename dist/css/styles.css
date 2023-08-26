@@ -2726,6 +2726,11 @@ button {
     width: 100%;
   }
 }
+@media (max-width: 576px) {
+  .catalog .catalog__viewtype-wrapper {
+    justify-content: space-between;
+  }
+}
 .catalog .catalog__viewtype {
   display: flex;
   align-items: center;
@@ -2820,6 +2825,29 @@ button {
 }
 .catalog .catalog__card-grid {
   position: relative;
+  width: 297px;
+  height: 396px;
+  transition: all 0s;
+}
+.catalog .catalog__card-grid.rotation {
+  perspective: 1500px;
+  -moz-perspective: 1500px;
+}
+.catalog .catalog__card-grid.rotation:hover .cardinfo {
+  left: unset;
+  width: unset;
+}
+.catalog .catalog__card-grid.rotation .card,
+.catalog .catalog__card-grid.rotation .cardinfo {
+  width: 100%;
+  backface-visibility: hidden;
+  transition: all 0.3s ease-out;
+}
+.catalog .catalog__card-grid.rotation .card {
+  transform: rotateY(-180deg);
+}
+.catalog .catalog__card-grid.rotation .cardinfo {
+  transform: rotateY(0deg);
 }
 .catalog .catalog__card-grid.active .card {
   z-index: 4;
@@ -2845,7 +2873,9 @@ button {
   box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.2);
 }
 .catalog .card {
-  position: relative;
+  position: absolute;
+  left: 0;
+  top: 0;
   padding: 0 15px 30px 15px;
   background-color: #fff;
   max-width: 297px;
@@ -2996,6 +3026,11 @@ button {
   left: 0;
   top: 0;
   padding: 39px 17px 10px 18px;
+}
+@media (max-width: 768px) {
+  .catalog .cardinfo {
+    transform: rotateY(180deg);
+  }
 }
 .catalog .cardinfo__header {
   display: flex;

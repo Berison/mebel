@@ -262,6 +262,8 @@ if (catalogPage) {
   const formattedNums = document.querySelectorAll('.catalog .formatted')
   const cards = document.querySelectorAll('.catalog__card-grid')
   const viewTypeBtns = document.querySelectorAll('.catalog__btn')
+  const btnGrid = document.querySelector('.catalog__btn--grid')
+  const btnList = document.querySelector('.catalog__btn--list')
 
   //Dropdown "Сортувати"
   catalogSortBtn.addEventListener('click', (e) => {
@@ -283,9 +285,16 @@ if (catalogPage) {
   //Для того, чтобы при наведении на карточку выезжающий список был всегда поверх соседних карточек, но на уровень ниже своей родительской карточки добавляется отдельный класс, чтобы родительской карточке дать наивысший z-index
   cards.forEach(card => {
     card.addEventListener('mouseover', (e) => {
-      if (e.target.closest('.catalog__card-grid') === card) {
+      if (e.target.closest('.catalog__card-grid') === card && window.innerWidth > 768) {
         cards.forEach(item => item.classList.remove('active'))
         card.classList.add('active')
+      }
+    })
+
+    //Если ширина экрана меньше 768, при клике на карточку добавляется класс, который позволяет переворачивать карточку вокруг оси Y
+    card.addEventListener('click', () => {
+      if (window.innerWidth <= 768) {
+        card.classList.toggle('rotation')
       }
     })
   })
@@ -294,19 +303,16 @@ if (catalogPage) {
   viewTypeBtns.forEach(btn => {
     btn.addEventListener('click', (e) => {
       const target = e.target
-      const gridBtn = target.closest('.catalog__viewtype').querySelector('.catalog__btn--grid')
-      const listBtn = target.closest('.catalog__viewtype').querySelector('.catalog__btn--list')
       const cards = document.querySelectorAll('.catalog__card-wrapper')
-
       if (target.closest('.catalog__btn--grid')) {
-        gridBtn.classList.add('active')
-        listBtn.classList.remove('active')
+        btnGrid.classList.add('active')
+        btnList.classList.remove('active')
         cards.forEach(card => {
           card.classList.remove('list')
         })
       } else if (target.closest('.catalog__btn--list')) {
-        listBtn.classList.add('active')
-        gridBtn.classList.remove('active')
+        btnList.classList.add('active')
+        btnGrid.classList.remove('active')
         cards.forEach(card => {
           card.classList.add('list')
         })
@@ -315,7 +321,7 @@ if (catalogPage) {
   })
 
 
-  // If window less 1200 make Grid View active. Block btn List view
+  // If window less 1200 make Grid View active. btnList make disabled
   window.onresize = () => {
     if (window.innerWidth <= 1200) {
       document.querySelector('.catalog__btn--grid').click()
@@ -323,7 +329,16 @@ if (catalogPage) {
     } else {
       document.querySelector('.catalog__btn--list').removeAttribute('disabled')
     }
+
+    // If window bigger 768 remove from cards class rotation
+    if (window.innerWidth > 768) {
+      cards.forEach(card => {
+        card.classList.remove('rotation')
+      })
+    }
   }
+
+
 }
 
 
