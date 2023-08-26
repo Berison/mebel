@@ -2591,12 +2591,26 @@ button {
   padding: 50px;
   flex-shrink: 0;
 }
+@media (max-width: 992px) {
+  .catalog .filter {
+    display: none;
+  }
+}
 .catalog .catalog__main {
   width: 100%;
 }
 .catalog .catalog__content {
   width: 100%;
   padding-bottom: 30px;
+}
+@media (max-width: 992px) {
+  .catalog .catalog__header-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    grid-gap: 40px;
+    max-width: 700px;
+    margin: 0 auto 40px;
+  }
 }
 .catalog .catalog__header {
   display: inline-block;
@@ -2624,6 +2638,13 @@ button {
   position: relative;
   z-index: 5;
   margin-bottom: 31px;
+}
+@media (max-width: 992px) {
+  .catalog .catalog__choise-menu {
+    flex-direction: column-reverse;
+    grid-gap: 20px;
+    margin-bottom: 0;
+  }
 }
 .catalog .catalog__sort {
   display: flex;
@@ -2695,6 +2716,16 @@ button {
 .catalog .catalog__sort-link {
   color: #000;
 }
+.catalog .catalog__viewtype-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+@media (max-width: 992px) {
+  .catalog .catalog__viewtype-wrapper {
+    width: 100%;
+  }
+}
 .catalog .catalog__viewtype {
   display: flex;
   align-items: center;
@@ -2716,6 +2747,28 @@ button {
   width: 2px;
   height: 18px;
   background-color: #ccc;
+}
+.catalog .catalog__filter-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  grid-gap: 12px;
+  display: none;
+}
+@media (max-width: 992px) {
+  .catalog .catalog__filter-mobile {
+    display: flex;
+  }
+}
+.catalog .catalog__filter-mobile svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--mainGreen);
+}
+.catalog .catalog__filter-mobile .catalog__filter-mobile-text {
+  font-size: 16px;
+  font-weight: 700;
+  color: #4d4d4d;
 }
 .catalog .catalog__main-content {
   display: flex;
@@ -3013,7 +3066,12 @@ button {
   justify-content: center;
   grid-gap: 30px;
 }
-.catalog .paginationn__wrapper {
+@media (max-width: 992px) {
+  .catalog .pagination {
+    flex-direction: column-reverse;
+  }
+}
+.catalog .pagination__wrapper {
   display: flex;
   align-items: center;
   justify-content: start;
