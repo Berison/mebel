@@ -285,7 +285,7 @@ if (catalogPage) {
   //Для того, чтобы при наведении на карточку выезжающий список был всегда поверх соседних карточек, но на уровень ниже своей родительской карточки добавляется отдельный класс, чтобы родительской карточке дать наивысший z-index
   cards.forEach(card => {
     card.addEventListener('mouseover', (e) => {
-      if (e.target.closest('.catalog__card-grid') === card && window.innerWidth > 768) {
+      if (e.target.closest('.catalog__card-grid') === card) {
         cards.forEach(item => item.classList.remove('active'))
         card.classList.add('active')
       }
