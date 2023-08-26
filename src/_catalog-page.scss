@@ -14,6 +14,8 @@
     background-color: #eee;
     padding: 50px;
     flex-shrink: 0;
+
+
   }
 
   .catalog__main {
@@ -172,7 +174,7 @@
     }
   }
 
-  .catalog__main {
+  .catalog__main-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -181,12 +183,44 @@
   }
 
   .catalog__card-wrapper {
-    &:nth-child(3n) {
-      .catalog__card-grid:hover {
-        .cardinfo {
-          left: -107%;
-          width: 107%;
-          box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.2);
+    @media (max-width: 1300px) {
+      width: 48%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:nth-child(2n) {
+        .catalog__card-grid:hover {
+          .cardinfo {
+            left: -107%;
+            width: 107%;
+            box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.2);
+          }
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+
+      &:nth-child(n) {
+        .catalog__card-grid:hover {
+          .cardinfo {
+            left: 0;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    @media (min-width: 1301px) {
+      &:nth-child(3n) {
+        .catalog__card-grid:hover {
+          .cardinfo {
+            left: -107%;
+            width: 107%;
+            box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.2);
+          }
         }
       }
     }
@@ -200,6 +234,12 @@
 
       .catalog__card-list {
         display: flex;
+
+        &.banner {
+          .card__image::after {
+            display: block;
+          }
+        }
       }
     }
   }
@@ -584,10 +624,30 @@
     display: none;
 
     .card__image {
-      width: auto;
-      height: 230px;
+      position: relative;
+      width: 230px;
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       margin: 0;
       flex-shrink: 0;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: #000;
+        opacity: 0.2;
+        display: none;
+      }
+
+      img {
+        height: fit-content;
+      }
     }
 
     .catalog_card-main {

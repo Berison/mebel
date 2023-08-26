@@ -315,4 +315,15 @@ if (catalogPage) {
   })
 
 
+  // If window less 1200 make Grid View active. Block btn List view
+  window.onresize = () => {
+    if (window.innerWidth <= 1200) {
+      document.querySelector('.catalog__btn--grid').click()
+      document.querySelector('.catalog__btn--list').setAttribute('disabled', '')
+    } else {
+      document.querySelector('.catalog__btn--list').removeAttribute('disabled')
+    }
+  }
 }
+
+
