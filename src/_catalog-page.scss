@@ -69,7 +69,7 @@
     z-index: 5;
     margin-bottom: 31px;
 
-    @media (max-width: 576px) {
+    @media (max-width: 992px) {
       flex-direction: column-reverse;
       grid-gap: 20px;
       margin-bottom: 0;
@@ -178,7 +178,6 @@
 
     @media (max-width: 992px) {
       width: 100%;
-      justify-content: end;
     }
 
     @media (max-width: 576px) {
@@ -191,10 +190,6 @@
     align-items: center;
     justify-content: flex-end;
     margin-right: 6px;
-
-    @media (max-width: 768px) {
-      display: none;
-    }
 
     .catalog__btn {
       transition: all 0s;
@@ -216,6 +211,12 @@
       width: 2px;
       height: 18px;
       background-color: #ccc;
+    }
+
+    .catalog__btn--list {
+      @media (max-width: 768px) {
+        opacity: 0.4;
+      }
     }
 
   }

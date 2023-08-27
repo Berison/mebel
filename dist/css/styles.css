@@ -2639,7 +2639,7 @@ button {
   z-index: 5;
   margin-bottom: 31px;
 }
-@media (max-width: 576px) {
+@media (max-width: 992px) {
   .catalog .catalog__choise-menu {
     flex-direction: column-reverse;
     grid-gap: 20px;
@@ -2728,7 +2728,6 @@ button {
 @media (max-width: 992px) {
   .catalog .catalog__viewtype-wrapper {
     width: 100%;
-    justify-content: end;
   }
 }
 @media (max-width: 576px) {
@@ -2741,11 +2740,6 @@ button {
   align-items: center;
   justify-content: flex-end;
   margin-right: 6px;
-}
-@media (max-width: 768px) {
-  .catalog .catalog__viewtype {
-    display: none;
-  }
 }
 .catalog .catalog__viewtype .catalog__btn {
   transition: all 0s;
@@ -2764,6 +2758,11 @@ button {
   width: 2px;
   height: 18px;
   background-color: #ccc;
+}
+@media (max-width: 768px) {
+  .catalog .catalog__viewtype .catalog__btn--list {
+    opacity: 0.4;
+  }
 }
 .catalog .catalog__filter-mobile {
   display: flex;
