@@ -299,9 +299,18 @@ if (catalogPage) {
       }
     })
 
-    //Если ширина экрана меньше 768, при клике на карточку добавляется класс, который позволяет переворачивать карточку вокруг оси Y
+    //Если ширина экрана меньше 768, при клике на карточку типа "Grid" добавляется класс, который позволяет переворачивать карточку вокруг оси Y
     card.addEventListener('click', () => {
       if (window.innerWidth <= 768) {
+        card.classList.toggle('rotation')
+      }
+    })
+  })
+
+  cardsList.forEach(card => {
+    card.addEventListener('click', () => {
+      if (window.innerWidth <= 1200) {
+        console.log(111)
         card.classList.toggle('rotation')
       }
     })
@@ -331,7 +340,7 @@ if (catalogPage) {
 
   // If window less 1200 make Grid View active. btnList make disabled
   window.onresize = () => {
-    if (window.innerWidth <= 1200) {
+    if (window.innerWidth <= 768) {
       document.querySelector('.catalog__btn--grid').click()
       document.querySelector('.catalog__btn--list').setAttribute('disabled', '')
     } else {
