@@ -363,8 +363,9 @@ if (catalogPage) {
 const cartPage = document.querySelector('.cart-page ');
 
 if (cartPage) {
-  const formattedNums = document.querySelectorAll('.cart-page .cartTable__cost')
+  const formattedNums = document.querySelectorAll('.cart-page .formatted')
   const cartCounter = document.querySelectorAll('.cartTable__cell--count')
+  const accordion = document.querySelector('.cartAccordion')
 
   //Formating price from 10758 to 10 758
   formattedNums.forEach(num => {
@@ -397,6 +398,26 @@ if (cartPage) {
 
     })
   })
+
+  accordion.addEventListener('click', (e) => {
+    if (e.target.closest('.cartAccordion__item-button')) {
+      const accordionItem = e.target.closest('.cartAccordion__item')
+      const btn = accordionItem.querySelector('.cartAccordion__item-button')
+      const contentHeight = accordionItem.querySelector('.cartAccordion__item-content').getBoundingClientRect().height
+      console.log("contentHeight:", contentHeight)
+      if (btn.classList.contains('active')) {
+        console.log('remove')
+        btn.classList.remove('active')
+        accordionItem.querySelector('.cartAccordion__item-body').style.maxHeight = 0
+      } else {
+        console.log('add')
+        btn.classList.add('active')
+        accordionItem.querySelector('.cartAccordion__item-body').style.maxHeight = contentHeight + 'px'
+      }
+    }
+  })
+
+
 
 
 }
