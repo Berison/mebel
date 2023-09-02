@@ -359,3 +359,45 @@ if (catalogPage) {
 }
 
 
+//Cart-page
+const cartPage = document.querySelector('.cart-page ');
+
+if (cartPage) {
+  const formattedNums = document.querySelectorAll('.cart-page .cartTable__cost')
+  const cartCounter = document.querySelectorAll('.cartTable__cell--count')
+
+  //Formating price from 10758 to 10 758
+  formattedNums.forEach(num => {
+    num.textContent = parseInt(num.textContent).toLocaleString('ru-RU');
+  })
+
+  //Counter for cart
+  cartCounter.forEach(counter => {
+    counter.addEventListener('click', (e) => {
+      let value = parseInt(counter.querySelector('.cartTable__counter').textContent)
+      try {
+        if (isNaN(value)) {
+          throw new Error("Операція неможлива: значення лічильника не число");
+        }
+
+        if (e.target.closest('.cartTable__minus')) {
+          if (value - 1 > 0) {
+            value = value - 1
+            counter.querySelector('.cartTable__counter').textContent = value
+          }
+        } else if (e.target.closest('.cartTable__plus')) {
+          if (value + 1 < 100) {
+            value = value + 1
+            counter.querySelector('.cartTable__counter').textContent = value
+          }
+        }
+      } catch (error) {
+        console.log(error.message)
+      }
+
+    })
+  })
+
+
+}
+
