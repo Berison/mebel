@@ -360,7 +360,7 @@ if (catalogPage) {
 
 
 //Cart-page
-const cartPage = document.querySelector('.cart-page ');
+const cartPage = document.querySelector('.cart-page');
 
 if (cartPage) {
   const formattedNums = document.querySelectorAll('.cart-page .formatted')
@@ -406,16 +406,65 @@ if (cartPage) {
       const contentHeight = accordionItem.querySelector('.cartAccordion__item-content').getBoundingClientRect().height
       console.log("contentHeight:", contentHeight)
       if (btn.classList.contains('active')) {
-        console.log('remove')
         btn.classList.remove('active')
         accordionItem.querySelector('.cartAccordion__item-body').style.maxHeight = 0
       } else {
-        console.log('add')
         btn.classList.add('active')
         accordionItem.querySelector('.cartAccordion__item-body').style.maxHeight = contentHeight + 'px'
       }
     }
   })
+
+
+
+}
+
+
+
+//News-single-page
+const newsSinglePage = document.querySelector('.news-single-page');
+
+if (newsSinglePage) {
+  const swiperNewsSinglePopular = new Swiper('.popular-main', {
+    spaceBetween: 30,
+    slidesPerGroup: 1,
+    direction: 'horizontal',
+    navigation: {
+      nextEl: '.popular-main .swiper-button-next',
+      prevEl: '.popular-main .swiper-button-prev',
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+        direction: 'horizontal',
+      },
+      992: {
+        slidesPerView: 3,
+        direction: 'vertical',
+        slidesPerGroup: 1,
+      }
+    }
+  });
+
+  const formattedNums = document.querySelectorAll('.news-single-page .formatted')
+
+  //Formating price from 10758 to 10 758
+  formattedNums.forEach(num => {
+    num.textContent = parseInt(num.textContent).toLocaleString('ru-RU');
+  })
+
+
+
+
+
+
+
+
+
+
 
 
 

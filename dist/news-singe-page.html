@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mebel</title>
+  <!-- <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</head>
+
+<body class="news-single-page">
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="header-inner__menu">
+          <button type="button">
+            <img src="./assets/header/menu.svg" alt="" />
+            <span>Меню</span>
+          </button>
+        </div>
+        <div class="header-inner__links">
+          <a href="#">Контакти</a>
+          <a href="#">Доставка і занос</a>
+          <a href="#">Оплата і гарантія</a>
+          <a href="#">Розстрочка</a>
+        </div>
+        <div class="header-inner__right">
+          <div class="header-inner__reviews">
+            <p>Відгуки</p>
+            <span>225</span>
+          </div>
+        </div>
+        <div class="header-inner__countries">
+          <span class="title">Адреса міст</span>
+          <span class="arrow"><img src="./assets/header/down-arrow.svg" alt="" /></span>
+          <div class="list">
+            <p data-city-id="1">Полтава</p>
+            <p data-city-id="2">Машівка</p>
+            <p data-city-id="3">Красноград</p>
+          </div>
+        </div>
+        <div class="header-inner__lang">
+          <span class="title">Укр</span>
+          <span class="arrow"><img src="./assets/header/down-arrow.svg" alt="" /></span>
+          <div class="list">
+            <p data-lang-id="1">Укр</p>
+            <p data-lang-id="2">Eng</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <div class="header-inner-contacts">
+      <div class="header-inner-contacts__graphs">
+        <p><span>Пн-Пт:</span> с 9.00 до 19.00</p>
+        <p><span>Сб-Вс:</span> с 10.00 до 18.00</p>
+      </div>
+      <div class="header-inner-contacts__phones">
+        <a href="tel:(044) 221-61-22"><span>(044)</span> 221-61-22</a>
+        <a href="tel:(050) 229-58-53"><span>(050)</span> 229-58-53</a>
+        <a href="tel:(093) 772-78-19"><span>(093)</span> 772-78-19</a>
+        <a href="tel:(093) 772-78-19"><span>(093)</span> 772-78-19</a>
+      </div>
+      <div class="header-inner-contacts__social">
+        <a href="#" target="_blank"><img src="./assets/header/facebook-logo-blue.svg" alt="" /></a>
+        <a href="#" target="_blank"><img src="./assets/header/instagram-social-network-logo-of-photo-camera-color.svg"
+            alt="" /></a>
+        <a href="#" target="_blank"><img src="./assets/header/social-google-plus-square-button-red.svg" alt="" /></a>
+        <a href="#" target="_blank"><img src="./assets/header/twitter-logo-silhouette-blue.svg" alt="" /></a>
+        <a href="#" target="_blank"><img src="./assets/header/youtube-red.svg" alt="" /></a>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="header-inner-controls">
+      <div class="header-inner-controls__logo">
+        <a href="./"><img src="https://divandivanuch.ua/image/cache/data/divan_home_v1-215x120.png" alt="" /></a>
+      </div>
+      <div class="header-inner-controls__search">
+        <form action="#" onsubmit="return false">
+          <input type="search" name="search" id="header-search" placeholder="Що ви шукаєте?" maxlength="50" />
+          <button type="submit">
+            <img src="./assets/header/loupe.svg" alt="" />
+          </button>
+        </form>
+      </div>
+      <div class="header-inner-controls__feedback">
+        <button type="button">Замовити зворотній дзвінок</button>
+      </div>
+      <div class="header-inner-controls__favorite">
+        <button type="button">
+          <img src="./assets/header/favorite.svg" alt="" />
+        </button>
+        <span>0</span>
+      </div>
+      <div class="header-inner-controls__checkout">
+        <button type="button">
+          <img src="./assets/header/shopping-basket.svg" alt="" /><span>1</span>
+        </button>
+        <p class="price">12 000 <span>грн</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="header-inner-controls-mobile">
+    <div class="header-inner-controls-mobile__checkout">
+      <div class="container">
+        <div class="header-inner-controls__logo">
+          <a href="./"><img src="https://divandivanuch.ua/image/cache/data/divan_home_v1-215x120.png" alt="" /></a>
+        </div>
+        <div class="header-inner-controls__favorite">
+          <button type="button">
+            <img src="./assets/header/favorite.svg" alt="" />
+          </button>
+          <span>0</span>
+        </div>
+        <div class="header-inner-controls__checkout">
+          <button type="button">
+            <img src="./assets/header/shopping-basket.svg" alt="" /><span>1</span>
+          </button>
+          <p class="price">12 000 <span>грн</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="header-inner-controls-mobile__phone">
+        <a href="tel:0 800 123 12 12"><img src="./assets/header/phone-call.svg" alt="" />0 800 123 12
+          12</a>
+      </div>
+      <div class="header-inner-controls-mobile__schedule">
+        <p><span>Пн-Пт:</span>с 9.00 до 19.00</p>
+        <p><span>Сб-Вс:</span>с 10.00 до 18.00</p>
+      </div>
+      <div class="header-inner-controls-mobile__feedback">
+        <button type="button" class="feedback">
+          Замовити зворотній дзвінок
+        </button>
+        <button type="button" class="search">
+          <img src="./assets/header/loupe.svg" alt="" />
+        </button>
+      </div>
+      <div class="header-inner-controls-mobile__catalog">
+        <button type="button">
+          <img src="./assets/header/list.svg" alt="" />Каталог товарів
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="header-catalog">
+    <div class="container">
+      <div class="header-catalog-inner">
+        <div class="list">
+          <div class="item">
+            <a href="#">
+              <img src="./assets/header/armchair.svg" alt="" />
+              <span>М'які меблі</span>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#"><img src="./assets/header/bar.svg" alt="" />
+              <span>М'які меблі</span></a>
+          </div>
+          <div class="item">
+            <a href="#"><img src="./assets/header/bed (1).svg" alt="" />
+              <span>М'які меблі</span></a>
+          </div>
+          <div class="item">
+            <a href="#"><img src="./assets/header/bed.svg" alt="" />
+              <span>М'які меблі</span></a>
+          </div>
+          <div class="item">
+            <a href="#"><img src="./assets/header/bed3.svg" alt="" />
+              <span>М'які меблі</span></a>
+          </div>
+          <div class="item">
+            <a href="#"><img src="./assets/header/closet.svg" alt="" />
+              <span>М'які меблі</span></a>
+          </div>
+          <div class="item">
+            <a href="#"><img src="./assets/header/couch.svg" alt="" />
+              <span>М'які меблі</span></a>
+          </div>
+          <div class="item">
+            <a href="#"><img src="./assets/header/desk.svg" alt="" />
+              <span>М'які меблі</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <div class="container">
+    <div class="news-single">
+      <div class="news-single__main">
+
+        <div class="news-single__header-wrapper">
+          <h2 class="news-single__header">Назва новини назва новини</h2>
+        </div>
+
+        <div class="news-single__image-wrapper">
+          <img src="./assets/news-single-page/living-room.jpg" alt="" class="news-single__image">
+        </div>
+
+        <div class="news-single__content">
+          <p class="news-single__text">
+            Lorem Ipsum є псевдо- латинський текст використовується у веб - дизайні, типографіка, верстка, і друку
+            замість англійської підкреслити елементи дизайну над змістом. Це також називається заповнювач ( або
+            наповнювач) текст. Це зручний інструмент для макетів. Це допомагає намітити візуальні елементи в документ
+            або презентацію, наприклад, друкарня, шрифт, або макет. Lorem Ipsum в основному частиною латинського тексту
+            за класичною автор і філософа Цицерона. Це слова і букви були змінені додаванням або видаленням, так
+            навмисно роблять його зміст безглуздо, це не є справжньою, правильно чи зрозумілою Латинської більше. У той
+            час як Lorem Ipsum все ще нагадує класичну латину, він насправді не має ніякого значення. Як текст Цицерона
+            не містить літери K, W, або Z, чужі латина, ці та інші часто вставляється випадково імітувати типографський
+            Зовнішність європейських мовах, як і орграфов будуть знайдено в оригіналі.
+          </p>
+          <p class="news-single__text">
+            У професійному контексті це часто буває, що приватні або корпоративні клієнти Corder публікацію, які будуть
+            зроблені і представлені з фактичний зміст все ще не готовий. Подумайте про прес- блозі, що наповнилися
+            змістом погодинна в день буде жити. Однак рецензенти схильні відволікатися на зрозумілій змісту, скажімо,
+            випадкового тексту, скопійованого з газети або в інтернеті., Швидше за все, зосередитися на тексті, не
+            звертаючи уваги на макет і його елементів. Крім того, випадковий текст ризикує бути ненавмисно гумористичні
+            або образливим, неприйнятним ризиком в корпоративному середовищі. Lorem Ipsum і його численні варіанти були
+            використані з початку 1960 -х років, і цілком імовірно, починаючи з шістнадцятого століття.
+          </p>
+
+          <h3 class="news-single__list-title">У професійному контексті це часто буває</h3>
+          <ul class="news-single__list">
+            <li class="news-single__item">Lorem Ipsum є псевдо- латинський текст</li>
+            <li class="news-single__item">Lorem Ipsum є псевдо- латинський текст</li>
+            <li class="news-single__item">Lorem Ipsum є псевдо- латинський текст</li>
+          </ul>
+
+
+          <p class="news-single__text">
+            Це слова і букви були змінені додаванням або видаленням, так навмисно роблять його зміст безглуздо, це не є
+            справжньою, правильно чи зрозумілою Латинської більше. У той час як Lorem Ipsum все ще нагадує класичну
+            латину, він насправді не має ніякого значення. Як текст Цицерона не містить літери K, W, або Z, чужі латина,
+            ці та інші часто вставляється випадково імітувати типографський Зовнішність європейських мовах, як і
+            орграфов будуть знайдено в оригіналі.
+          </p>
+        </div>
+        <div class="news-single__buttons">
+          <button class="news-single__button news-single__button--left">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+              y="0px" viewBox="0 0 31.5 31.5" style="enable-background:new 0 0 31.5 31.5;" xml:space="preserve">
+              <path class="st0" d="M0.3,15c-0.4,0.4-0.4,1.1,0,1.6l10,10c0.4,0.4,1.1,0.4,1.6,0c0.4-0.4,0.4-1.1,0-1.6l-8-8h26.6
+	c0.6,0,1.1-0.5,1.1-1.1s-0.5-1.1-1.1-1.1H3.8l8-8c0.4-0.4,0.4-1.1,0-1.6c-0.4-0.4-1.2-0.4-1.6,0L0.3,15z" />
+            </svg>
+            <span>Попередня стаття</span>
+          </button>
+          <button class="news-single__button news-single__button--right">
+            <span>Наступна стаття</span>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+              y="0px" viewBox="0 0 31.5 31.5" style="enable-background:new 0 0 31.5 31.5;" xml:space="preserve">
+              <path class="st0" d="M21.2,5c-0.4-0.4-1.1-0.4-1.6,0c-0.4,0.4-0.4,1.1,0,1.6l8,8H1.1c-0.6,0-1.1,0.5-1.1,1.1s0.5,1.1,1.1,1.1h26.6
+	l-8,8c-0.4,0.4-0.4,1.2,0,1.6s1.2,0.4,1.6,0l10-10c0.4-0.4,0.4-1.1,0-1.6L21.2,5z" />
+            </svg>
+          </button>
+        </div>
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <aside class="news-single__popular popular">
+        <div class="popular__header-wrapper">
+          <h2 class="popular__header">Популярні товари</h2>
+        </div>
+
+        <div class="swiper popular-main">
+          <div class="swiper-wrapper">
+
+
+
+
+
+
+            <div class="swiper-slide">
+              <div class="catalog__card card">
+                <div class="card__badge">
+                </div>
+                <a class="card__title" href="#">Диван Еліт (міні) Фабрика "Еврософ" Київ</a>
+                <div class="card__props">
+                  <div class="card__property success">
+                    <?xml version='1.0' encoding='utf-8'?>
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129"
+                      xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129">
+                      <g>
+                        <path
+                          d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z" />
+                      </g>
+                    </svg>
+                    <span class="card__property-text">Є на складі</span>
+                  </div>
+                  <div class="card__property success">
+                    <?xml version='1.0' encoding='utf-8'?>
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129"
+                      xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129">
+                      <g>
+                        <path
+                          d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z" />
+                      </g>
+                    </svg>
+                    <span class="card__property-text">Подарунок</span>
+                  </div>
+                </div>
+                <div class="card__image">
+                  <img src="./assets/catalog-page/sofa2.jpg" alt="Диван Еліт (міні) Фабрика 'Еврософ' Київ">
+                </div>
+                <div class="card__footer">
+                  <div class="card__price">
+                    <div class="card__price-current">
+                      <span class="card__cost formatted">10758</span>
+                      <span class="card__currency">грн</span>
+                    </div>
+                    <div class="card__price-old">
+                      <span class="card__cost formatted">10758</span>
+                      <span class="card__currency">грн</span>
+                    </div>
+                  </div>
+                  <button class="card__btn">До кошику</button>
+                </div>
+
+              </div>
+            </div>
+
+
+
+            <div class="swiper-slide">
+              <div class="catalog__card card">
+                <div class="card__badge">
+                  <div class="card__tag promotion">Акція</div>
+                </div>
+                <a class="card__title" href="#">Диван Еліт (міні) Фабрика "Еврософ" Київ</a>
+                <div class="card__props">
+                  <div class="card__property success">
+                    <?xml version='1.0' encoding='utf-8'?>
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129"
+                      xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129">
+                      <g>
+                        <path
+                          d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z" />
+                      </g>
+                    </svg>
+                    <span class="card__property-text">Є на складі</span>
+                  </div>
+                  <div class="card__property success">
+                    <?xml version='1.0' encoding='utf-8'?>
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129"
+                      xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129">
+                      <g>
+                        <path
+                          d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z" />
+                      </g>
+                    </svg>
+                    <span class="card__property-text">Безкоштовна доставка</span>
+                  </div>
+                </div>
+                <div class="card__image">
+                  <img src="./assets/catalog-page/sofa1.jpg" alt="Диван Еліт (міні) Фабрика 'Еврософ' Київ">
+                </div>
+                <div class="card__footer">
+                  <div class="card__price discount">
+                    <div class="card__price-current">
+                      <span class="card__cost formatted">10758</span>
+                      <span class="card__currency">грн</span>
+                    </div>
+                    <div class="card__price-old">
+                      <span class="card__cost formatted">10758</span>
+                      <span class="card__currency">грн</span>
+                    </div>
+                  </div>
+                  <button class="card__btn">До кошику</button>
+                </div>
+
+              </div>
+            </div>
+
+
+
+            <div class="swiper-slide">
+              <div class="catalog__card card banner">
+                <a href="#" class="banner__link"></a>
+                <div class="card__badge">
+                </div>
+                <a class="card__title" href="#">Диван Еліт (міні) Фабрика "Еврософ" Київ</a>
+                <div class="card__props">
+                  <div class="card__property absent">
+                    <?xml version='1.0' encoding='utf-8'?>
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129"
+                      xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129">
+                      <g>
+                        <path
+                          d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z" />
+                      </g>
+                    </svg>
+                    <span class="card__property-text">Немає на складі</span>
+                  </div>
+                </div>
+                <div class="card__image">
+                  <img src="./assets/catalog-page/banner.jpg" alt="Диван Еліт (міні) Фабрика 'Еврософ' Київ">
+                </div>
+                <div class="card__footer">
+                  <div class="card__price">
+                    <div class="card__price-current">
+                      <span class="card__cost formatted">10758</span>
+                      <span class="card__currency">грн</span>
+                    </div>
+                    <div class="card__price-old">
+                      <span class="card__cost formatted">10758</span>
+                      <span class="card__currency">грн</span>
+                    </div>
+                  </div>
+                  <button class="card__btn">До кошику</button>
+                </div>
+
+              </div>
+            </div>
+
+
+
+            <div class="swiper-slide">
+              <div class="catalog__card card">
+                <div class="card__badge">
+                  <div class="card__tag hit">Хіт</div>
+                </div>
+                <a class="card__title" href="#">Диван Еліт (міні) Фабрика "Еврософ" Київ</a>
+                <div class="card__props">
+                  <div class="card__property success">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129"
+                      xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129">
+                      <g>
+                        <path
+                          d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z" />
+                      </g>
+                    </svg>
+                    <span class="card__property-text">Є на складі</span>
+                  </div>
+                  <div class="card__property success">
+                    <?xml version='1.0' encoding='utf-8'?>
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129"
+                      xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129">
+                      <g>
+                        <path
+                          d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z" />
+                      </g>
+                    </svg>
+                    <span class="card__property-text">Безкоштовна доставка</span>
+                  </div>
+                </div>
+                <div class="card__image">
+                  <img src="./assets/catalog-page/sofa1.jpg" alt="Диван Еліт (міні) Фабрика 'Еврософ' Київ">
+                </div>
+                <div class="card__footer">
+                  <div class="card__price">
+                    <div class="card__price-current">
+                      <span class="card__cost formatted">10758</span>
+                      <span class="card__currency">грн</span>
+                    </div>
+                    <div class="card__price-old">
+                      <span class="card__cost formatted">10758</span>
+                      <span class="card__currency">грн</span>
+                    </div>
+                  </div>
+                  <button class="card__btn">До кошику</button>
+                </div>
+
+              </div>
+            </div>
+
+
+
+            <div class="swiper-slide">
+              <div class="catalog__card card">
+                <div class="card__badge">
+                  <div class="card__tag hit">Хіт</div>
+                </div>
+                <a class="card__title" href="#">Диван Еліт (міні) Фабрика "Еврософ" Київ</a>
+                <div class="card__props">
+                  <div class="card__property success">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129"
+                      xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129">
+                      <g>
+                        <path
+                          d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z" />
+                      </g>
+                    </svg>
+                    <span class="card__property-text">Є на складі</span>
+                  </div>
+                  <div class="card__property success">
+                    <?xml version='1.0' encoding='utf-8'?>
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129"
+                      xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129">
+                      <g>
+                        <path
+                          d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z" />
+                      </g>
+                    </svg>
+                    <span class="card__property-text">Безкоштовна доставка</span>
+                  </div>
+                </div>
+                <div class="card__image">
+                  <img src="./assets/catalog-page/sofa1.jpg" alt="Диван Еліт (міні) Фабрика 'Еврософ' Київ">
+                </div>
+                <div class="card__footer">
+                  <div class="card__price">
+                    <div class="card__price-current">
+                      <span class="card__cost formatted">10758</span>
+                      <span class="card__currency">грн</span>
+                    </div>
+                    <div class="card__price-old">
+                      <span class="card__cost formatted">10758</span>
+                      <span class="card__currency">грн</span>
+                    </div>
+                  </div>
+                  <button class="card__btn">До кошику</button>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="swiper-slide">
+              <div class="catalog__card card">
+                <div class="card__badge">
+                  <div class="card__tag hit">Хіт</div>
+                </div>
+                <a class="card__title" href="#">Диван Еліт (міні) Фабрика "Еврософ" Київ</a>
+                <div class="card__props">
+                  <div class="card__property success">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129"
+                      xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129">
+                      <g>
+                        <path
+                          d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z" />
+                      </g>
+                    </svg>
+                    <span class="card__property-text">Є на складі</span>
+                  </div>
+                  <div class="card__property success">
+                    <?xml version='1.0' encoding='utf-8'?>
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129"
+                      xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129">
+                      <g>
+                        <path
+                          d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z" />
+                      </g>
+                    </svg>
+                    <span class="card__property-text">Безкоштовна доставка</span>
+                  </div>
+                </div>
+                <div class="card__image">
+                  <img src="./assets/catalog-page/sofa1.jpg" alt="Диван Еліт (міні) Фабрика 'Еврософ' Київ">
+                </div>
+                <div class="card__footer">
+                  <div class="card__price">
+                    <div class="card__price-current">
+                      <span class="card__cost formatted">10758</span>
+                      <span class="card__currency">грн</span>
+                    </div>
+                    <div class="card__price-old">
+                      <span class="card__cost formatted">10758</span>
+                      <span class="card__currency">грн</span>
+                    </div>
+                  </div>
+                  <button class="card__btn">До кошику</button>
+                </div>
+
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </aside>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-inner-item footer-inner-item_copyright">
+          <div class="footer-inner-item__logo">
+            <a href="./"><img src="https://divandivanuch.ua/image/cache/data/divan_home_v1-215x120.png" alt=""></a>
+          </div>
+          <div class="footer-inner-item__text">
+            <p><b>&#169; Интернет-магазин "Puffik" 2016- <span id="year">2023</span></b> <br><br>
+              Все права защищены. Puffik является зарегистрированной торговой маркой с 2016 года.</p>
+          </div>
+        </div>
+        <div class="footer-inner-item footer-inner-item_info">
+          <strong>Інформація</strong>
+          <ul>
+            <li>
+              <a href="#">Контакти</a>
+            </li>
+            <li>
+              <a href="#">Доставка і занос</a>
+            </li>
+            <li>
+              <a href="#">Оплата і гарантія</a>
+            </li>
+            <li>
+              <a href="#">Розстрочка</a>
+            </li>
+            <li>
+              <a href="#">Збірник</a>
+            </li>
+            <li>
+              <a href="#">Як замовити м'які меблі?</a>
+            </li>
+            <li>
+              <a href="#">Новини</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-inner-item footer-inner-item_contacts">
+          <strong>Контакти</strong>
+          <ul class="phones">
+            <li><a href="tel:+(044)221-61-22"><span>(044)</span> 221-61-22</a></li>
+            <li><a href="tel:+38 (050) 229-58-53"><span>+38 (050)</span> 229-58-53</a></li>
+            <li><a href="tel:+38 (093) 772-78-19"><span>+38 (093)</span> 772-78-19</a></li>
+            <li><a href="tel:+38 (098) 047-22-70"><span>+38 (098)</span> 047-22-70</a></li>
+          </ul>
+          <ul class="social">
+            <a href="#" target="_blank"><img src="./assets/header/facebook-logo-blue.svg" alt=""></a>
+            <a href="#" target="_blank"><img
+                src="./assets/header/instagram-social-network-logo-of-photo-camera-color.svg" alt=""></a>
+            <a href="#" target="_blank"><img src="./assets/header/social-google-plus-square-button-red.svg" alt=""></a>
+            <a href="#" target="_blank"><img src="./assets/header/twitter-logo-silhouette-blue.svg" alt=""></a>
+            <a href="#" target="_blank"><img src="./assets/header/youtube-red.svg" alt=""></a>
+          </ul>
+        </div>
+        <div class="footer-inner-item footer-inner-item_address">
+          <strong>Адреса і графік роботи</strong>
+          <div class="info">
+            <p><b>Київ, Бульвар Вацлава Гавела 89</b><br><br>
+              <b>Пн-Пт:</b> с 9.00 до 19.00<br><br>
+              <b>Сб-Вс:</b> с 10.00 до 18.00<br><br>
+              Без выходных и перерывов!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="./js/bundle.js"></script>
+</body>
+
+</html>
